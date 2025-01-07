@@ -3,67 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Professional Portfolio</title>
-    <meta name="description" content="Professional portfolio and information about Your Name">
+    <title>Kelvin Chaguay</title>
+    <meta name="description" content="Personal website of Kelvin Chaguay">
     <meta name="google-site-verification" content="KDBvlnnJkyAGUITNPGv1gX7Gee6KBXVKvPGKJV_eszQ" />
-    
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
+            margin: 0;
             padding: 20px;
+            text-align: center;
         }
         h1 {
-            color: #2c3e50;
-        }
-        .error {
-            color: #e74c3c;
-            font-style: italic;
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <p>Welcome to my professional portfolio</p>
-    </header>
-
-    <main id="content">
-        <!-- Content will be dynamically inserted here -->
-    </main>
-
-    <footer>
-        <p>&copy; 2023 Your Name. All rights reserved.</p>
-    </footer>
+    <h1>Welcome to Kelvin Chaguay's Website</h1>
+    <p id="message"></p>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var searchQuery = new URLSearchParams(window.location.search).get('query');
-            var contentElement = document.getElementById('content');
-
-            if (searchQuery && searchQuery.toLowerCase().includes("Kelvin Chaguay".toLowerCase())) {
-                // Redirect to your picture or certification page
-                window.location.href = "https://link-to-your-picture-or-certification.com";
-            } else if (searchQuery) {
-                contentElement.innerHTML = '<p class="error">Sorry, I don\'t recognize the search query: "' + searchQuery + '"</p>';
-            } else {
-                contentElement.innerHTML = `
-                    <section>
-                        <h2>About Me</h2>
-                        <p>I am a professional with expertise in [Your Field]. With [X] years of experience, I specialize in [Your Specialties].</p>
-                    </section>
-                    <section>
-                        <h2>Contact</h2>
-                        <p>Email: your.email@example.com</p>
-                        <p>LinkedIn: <a href="https://www.linkedin.com/in/your-profile">Your LinkedIn Profile</a></p>
-                    </section>
-                `;
-            }
-        });
+        var searchQuery = window.location.search.substring(1).toLowerCase();
+        var message = document.getElementById('message');
+        
+        if (searchQuery.includes("kelvin-chaguay")) {
+            window.location.href = "https://kelvinchaguay.github.io/Kelv.github.io/";
+        } else {
+            message.textContent = "Welcome! Use the search query 'kelvin-chaguay' to see more.";
+        }
     </script>
 </body>
 </html>
-
